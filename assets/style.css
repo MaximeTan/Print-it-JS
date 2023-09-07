@@ -36,6 +36,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+.hidden {
+	display:none;
+}
 body {
 	line-height: 1;
 }
@@ -128,9 +131,11 @@ header {
 }
 #banner .arrow_left {
 	left: 10px;
+	cursor: pointer;
 }
 #banner .arrow_right {
 	right: 10px;
+	cursor: pointer;
 }
 /* Gestion des points du carrousel */
 .dots {
