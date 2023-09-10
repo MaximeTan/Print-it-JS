@@ -36,18 +36,15 @@ function nextSlide() {
 		dotSelected[count].classList.add("dot_selected")
 		console.log(count);
 	}
-// src i++[slides["images"][0]]
-
 function imageNext() {
-	imageChange.src = "./assets/images/slideshow/slide2.jpg"};
-
+	document.querySelector(".banner-img").src = "./assets/images/slideshow/" + slides[count]["image"]
+	document.getElementById("text").innerHTML = slides[count]["tagLine"];
+	};
 	next.addEventListener("click", (nextSlide));
 	next.addEventListener("click", (imageNext));
-
 //					Prev					//
 	function previousSlide() {
 		dotSelected[count].classList.remove("dot_selected");
-			
 			if(count > 0) {
 				count--;
 			}
@@ -57,11 +54,12 @@ function imageNext() {
 		console.log(count);
 	};
 	function imagePrev() {
-		imageChange.src = "./assets/images/slideshow/slide1.jpg"};
-
+		document.querySelector(".banner-img").src = "./assets/images/slideshow/" + slides[count]["image"]
+		document.getElementById("text").innerHTML = slides[count]["tagLine"];
+		};
 	previous.addEventListener("click", (previousSlide));
 	previous.addEventListener("click", (imagePrev));
 
-
+	// document.querySelector()
 	
 	
