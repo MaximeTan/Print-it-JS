@@ -17,34 +17,15 @@ const slides = [
 	}
 ]
 
-// let bannerSlider = document.querySelector("")
-
-
-// let currentDot = document.querySelector(".dot");
-// let currentImage = document.getElementById("2");
-
-// 	if (currentImage = currentDot) {
-// 		currentDot.classList.add('dot_selected')
-// 	};
-// const clickDroit = document.querySelector('.arrow_right');
-// clickDroit.addEventListener("click" ,(event)=>  {
-// 	const movingRight = document.getElementById("banner")
-// 	movingRight.scrollRight, nbr+=1;
-// 	console.log(event)
-// })
-// const clickGauche = document.querySelector('.arrow_left');
-// clickGauche.addEventListener("click" , ()=>  {
-// 	const movingLeft = document.getElementById("banner")
-// 	movingLeft, p-=1;
-// })
-
 	const dotSelected = document.querySelectorAll(".dot");
 	const nbSlide = dotSelected.length;
 	const next = document.querySelector(".arrow_right");
 	const previous = document.querySelector(".arrow_left");
+	let imageChange = document.getElementById("1");
 	let count = 0;
 
-	function nextSlide() {
+//					Next					//
+function nextSlide() {
 		dotSelected[count].classList.remove("dot_selected");
 			
 			if(count < nbSlide - 1) {
@@ -55,9 +36,15 @@ const slides = [
 		dotSelected[count].classList.add("dot_selected")
 		console.log(count);
 	}
+// src i++[slides["images"][0]]
+
+function imageNext() {
+	imageChange.src = "./assets/images/slideshow/slide2.jpg"};
 
 	next.addEventListener("click", (nextSlide));
+	next.addEventListener("click", (imageNext));
 
+//					Prev					//
 	function previousSlide() {
 		dotSelected[count].classList.remove("dot_selected");
 			
@@ -68,8 +55,13 @@ const slides = [
 			}
 		dotSelected[count].classList.add("dot_selected")
 		console.log(count);
-	}
+	};
+	function imagePrev() {
+		imageChange.src = "./assets/images/slideshow/slide1.jpg"};
 
 	previous.addEventListener("click", (previousSlide));
+	previous.addEventListener("click", (imagePrev));
 
-		
+
+	
+	
