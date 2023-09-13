@@ -27,7 +27,6 @@ const slides = [
 //					Next					//
 function nextSlide() {
 		dotSelected[count].classList.remove("dot_selected");
-			
 			if(count < nbSlide - 1) {
 				count++;
 			}
@@ -36,6 +35,7 @@ function nextSlide() {
 		dotSelected[count].classList.add("dot_selected")
 		console.log(count);
 	}
+
 function imageNext() {
 	document.querySelector(".banner-img").src = "./assets/images/slideshow/" + slides[count]["image"]
 	document.getElementById("text").innerHTML = slides[count]["tagLine"];
